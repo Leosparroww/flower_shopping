@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="cursor" onmouseover="fullBtn()">
+
+      <div class="cursor2">
+        <img src="./image/mouse2.png" alt="">
+      </div>
+      <div class="cursor1 ">
+        <img src="./image/mouse1.png" alt="" class="imgfull ">
+        <img src="./image/prev.png" class="imgprev" alt="">
+        <img src="./image/next.png" class="imgnext" alt="">
+      </div>
+    </div>
+    <!-- navbar start -->
+
+    <!-- navbar end -->
+    <header class="carousel" data-carousel onmouseover="mouseOver()" onmouseout="mouseOut()">
+      <section class="nav-bar" onmouseover="mouseOver(),fullBtn()" onmouseout="mouseOut()">
+        <h1 class="logo">Marigold</h1>
+        <ul class="nav-bar-item">
+          <li><a href="https://www.youtube.com/watch?v=vQtYtlp5jrA">Contact</a></li>
+          <li><a href="">FAQ</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Shop</a></li>
+
+        </ul>
+      </section>
+      <div class="btn-group">
+
+        <div class="btn prev" data-carousel-button="prev" onmouseover="prevBtn()"> PREV</div>
+        <div class="progress">
+          <div></div>
+        </div>
+        <div class="btn next" data-carousel-button="next" onmouseover="nextBtn()">NEXT</div>
+      </div>
+      <ul class="text-box" data-text onmouseover="fullBtn()">
+        <div class="text" data-active>
+          <div>
+            <h1>A bouquet for <br> every ocasion</h1>
+            <span>Want to send your condolences,or your love and support?<br>
+              No matter how the message you want to share, we have bouquet for you
+            </span><br>
+            <a href="#"> SHOP ALL FLOWER</a>
+          </div>
+        </div>
+        <div class="text">
+          <div>
+            <h1>Your Green Oasis Awaits!</h1>
+            <span>Are you seeking a touch of nature to elevate your living space?<br>
+              Escape to a world of natural wonders with our extraordinary plants
+            </span><br>
+            <a href="#"> SHOP ALL PLANTS</a>
+          </div>
+        </div>
+        <div class="text">
+          <div>
+            <h1>Are you ready to embark <br> on a remarkable event planning journey?</h1>
+            <span>Look no further, because we are here to turn your vision into a reality.
+            </span><br>
+            <a href="#">PLAN A EVENT </a>
+          </div>
+        </div>
+
+      </ul>
+      <ul data-slides>
+        <li class="slide" data-active>
+          <img src="./image/slideimage1.jpg" alt="" />
+        </li>
+        <li class="slide">
+          <img src="./image/slideimage2.jpg" alt="" />
+
+        </li>
+        <li class="slide">
+
+          <img src="./image/slideimage3.jpg" alt="" />
+
+        </li>
+      </ul>
+    </header>
+    <!-- carouselend -->
+    <section class="product">
+      <div class="product-text">
+        <h3>Ours products <span> </span></h3>
+      </div>
+      <div class="product-card">
+        <div>
+          <img src="./image/product1.jpg" alt="" />
+          <a class="card-text" href="">Flowers
+            <svg width="64px" height="64px" viewBox="-2.4 -2.4 28.80 28.80" xmlns="http://www.w3.org/2000/svg"
+              fill="none" stroke="#000000" transform="rotate(0)">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                stroke-width="1.584"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.4800000000000001"
+                  d="M4 12h16m0 0l-6 6m6-6l-6-6"></path>
+              </g>
+            </svg>
+          </a>
+        </div>
+        <div>
+          <img src="./image/product2.jpg" alt="" />
+          <a class="card-text" href="">Plants & Trees
+            <svg width="64px" height="64px" viewBox="-2.4 -2.4 28.80 28.80" xmlns="http://www.w3.org/2000/svg"
+              fill="none" stroke="#000000" transform="rotate(0)">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                stroke-width="1.584"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.4800000000000001"
+                  d="M4 12h16m0 0l-6 6m6-6l-6-6"></path>
+              </g>
+            </svg>
+          </a>
+        </div>
+        <div>
+          <img src="./image/product3.jpg" alt="" />
+          <a class="card-text" href="">Gifts
+            <svg width="64px" height="64px" viewBox="-2.4 -2.4 28.80 28.80" xmlns="http://www.w3.org/2000/svg"
+              fill="none" stroke="#000000" transform="rotate(0)">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                stroke-width="1.584"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.4800000000000001"
+                  d="M4 12h16m0 0l-6 6m6-6l-6-6"></path>
+              </g>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="event">
+      <div class="">
+        <article>
+          <h1>Planning and event?</h1>
+          <p>&ensp;&ensp;With our expert team of event planners by your side, we'll guide you through every step of the
+            process,
+            ensuring a
+            seamless and unforgettable experience that exceeds your expectations.</p>
+        </article>
+        <a href="">PLAN YOUR EVENT</a>
+      </div>
+      <div>
+        <img src="./image/makeingflower.jpg" alt="" />
+      </div>
+      <div class="">
+        <h1>Need a little help?</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis
+          iusto numquam ullam iste deserunt, enim perspiciatis deleniti?
+          Maiores quo fugiat nesciunt fuga sit obcaecati non, est beatae sint.
+          Facere, sint?
+        </p>
+        <a href="">How to care for your plants</a>
+      </div>
+      <div class="about-us">
+        <h1>About us</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel cumque
+          dignissimos natus hic ex dolorem iste voluptas, facilis saepe neque
+          cum eius rem numquam nesciunt dicta ut! Libero, amet accusantium!
+        </p>
+        <article>
+          <h4>Find us</h4>
+          <span> Brook street,
+            <br> Rota, YGN</span>
+          <article>
+            <span>
+              <h4>Opening hours</h4>
+              <span>Monday - Saturday, 9am-6pm <br>
+                Sunday, 10am-4pm
+              </span>
+              <span>
+      </div>
+      <div class=""><img src="./image/about.jpg" alt="" /></div>
+    </section>
+    <!-- follow along start-->
+    <section class="social-following">
+      <div class="social-text">
+        <h1>Follow along</h1>
+        <span>Stay up to date by following us on pinterest&ensp;<a href=""> @nobody</a></span>
+      </div>
+      <div class="social-image">
+        <img src="./image/followalong1.jpg" alt="">
+        <img src="./image/followalong2.jpg" alt="">
+        <img src="./image/followalong3.jpg" alt="">
+        <img src="./image/followalong4.jpg" alt="">
+        <img src="./image/followalong5.jpg" alt="">
+
+      </div>
+    </section>
+    <!-- follow along  end-->
+    <!-- footer start -->
+    <footer>
+      <div>
+        <h1>Marigold</h1>
+      </div>
+      <div class="">
+        <h3>SHOP</h3>
+        <span>Flower</span>
+        <span>Plants</span>
+        <span>Gift</span>
+        <span>Events</span>
+      </div>
+      <div class="">
+        <h3>ABOUT</h3>
+        <span>Meet the team</span>
+        <span>Careers</span>
+        <span>Blog</span>
+        <span>FAQs</span>
+
+      </div>
+      <div>
+        <h3>CONTACT</h3>
+        <span>Get in Touch</span>
+        <span>Customers Support</span>
+        <span>Location</span>
+      </div>
+      <div>
+        <h3>LET'S CONNECT</h3>
+      </div>
+      <div>© 2023 MARIGOLD FLOWERS & SHOP&ensp;|&ensp;PRIVACY POLICY&ensp;|&ensp;TERMS OF USE </div>
+    </footer>
+    <!-- footer end -->
+  </div>
+</body>
+<script src="./index.js"></script>
+
+</html>
