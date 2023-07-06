@@ -10,6 +10,10 @@
 
 <body>
   <div class="container">
+    <!-- scroll bar and mouse style -->
+    <div class="scroll-bar">
+      <img src="./image/scrollbar2.png" alt="" class="scroll-div">
+    </div>
     <div class="cursor" onmouseover="fullBtn()">
 
       <div class="cursor2">
@@ -21,10 +25,9 @@
         <img src="./image/next.png" class="imgnext" alt="">
       </div>
     </div>
-    <!-- navbar start -->
-
-    <!-- navbar end -->
+    <!-- carousel start -->
     <header class="carousel" data-carousel onmouseover="mouseOver()" onmouseout="mouseOut()">
+      <!-- navbar start -->
       <section class="nav-bar" onmouseover="mouseOver(),fullBtn()" onmouseout="mouseOut()">
         <h1 class="logo">Marigold</h1>
         <ul class="nav-bar-item">
@@ -35,6 +38,7 @@
 
         </ul>
       </section>
+      <!-- navbar end -->
       <div class="btn-group">
 
         <div class="btn prev" data-carousel-button="prev" onmouseover="prevBtn()"> PREV</div>

@@ -1,3 +1,55 @@
+var lastScrollTop = 0;
+let scrollHeight = document.documentElement.scrollHeight;
+const scrolls = document.querySelector(".scroll-bar");
+var timer = null;
+window.addEventListener(
+  "scroll",
+  function () {
+    var scroll = document.documentElement.scrollTop;
+    var p = document.body.parentNode;
+    //scroll percentage
+    scrollPercent = (p.scrollTop / (p.scrollHeight - p.clientHeight)) * 100;
+    scrolls.style.top = scrollPercent + "%";
+    //scroll up and down validate
+    if (scroll < lastScrollTop) {
+      ScrollUp();
+    } else if (scroll > lastScrollTop) {
+      ScrollDown();
+    }
+    lastScrollTop = scroll <= 0 ? 0 : scroll;
+  },
+  false
+);
+
+// scroll behaviers, scroll stop detect function
+function ScrollUp() {
+  if (timer !== null) {
+    clearTimeout(timer);
+    scrolls.style.animation = "spinForward 2s linear infinite";
+  }
+  timer = setTimeout(function () {
+    scrolls.style.animationPlayState = "paused";
+  }, 100);
+}
+function ScrollDown() {
+  if (timer !== null) {
+    clearTimeout(timer);
+    scrolls.style.animation = "spinBackward 2s linear infinite";
+  }
+  timer = setTimeout(function () {
+    scrolls.style.animationPlayState = "paused";
+  }, 100);
+}
+
+//scrollbar hover on display
+function scrollHover() {
+  var styleElement = document.createElement("style");
+  styleElement.appendChild(
+    document.createTextNode("body::-webkit-scrollbar: {width:20px}")
+  );
+  document.getElementsByTagName("head")[0].appendChild(styleElement);
+}
+
 // carousel
 
 const buttons = document.querySelectorAll("[data-carousel-button]");
