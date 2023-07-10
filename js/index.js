@@ -120,3 +120,16 @@ function fullBtn() {
   imgnext.style.display = "none";
   imgprev.style.display = "none";
 }
+
+let checkBox = document.querySelector(".checkbox");
+let navBar = document.querySelector(".nav-bar-item");
+let background = document.querySelector(".nav-bar-helper");
+function checkIn() {
+  if (checkBox.checked == !true) {
+    navBar.style.cssText = "transform:translateX(0%)";
+    background.style.cssText = " background-position: left;";
+  } else if (checkBox.checked == !false) {
+    navBar.style.cssText = "transform:translateX(200%)";
+    background.style.cssText = " background-position: right;";
+  }
+}
