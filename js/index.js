@@ -126,10 +126,11 @@ let navBar = document.querySelector(".nav-bar-item");
 let background = document.querySelector(".nav-bar-helper");
 function checkIn() {
   if (checkBox.checked == !true) {
-    navBar.style.cssText = "transform:translateX(0%)";
-    background.style.cssText = " background-position: left;";
+    navBar.style.cssText = "transition-delay:0.8s;transform:translate(0%);";
+    background.style.cssText = " background-position:left;";
   } else if (checkBox.checked == !false) {
-    navBar.style.cssText = "transform:translateX(200%)";
-    background.style.cssText = " background-position: right;";
+    navBar.style.cssText = "transition-delay:0s;transformtranslateY(-150%);";
+    background.style.cssText =
+      " transition-delay:0.8s;background-position: right;";
   }
 }
