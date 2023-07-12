@@ -140,35 +140,38 @@ let shop = 0;
 let about = 0;
 let contact = 0;
 let content = 0;
-function footer(id) {
-  let footerDisplay = document.querySelector(".footer-" + id + " div");
 
-  if (shop == 0) {
-    footerDisplay.style.cssText = "block";
-    shop = 1;
-  } else if (shop == 1) {
-    footerDisplay.style.display = "none";
-    shop = 0;
-  }
-  if (about == 0) {
-    footerDisplay.style.display = "block";
-    about = 1;
-  } else if (about == 1) {
-    footerDisplay.style.display = "none";
-    about = 0;
-  }
-  if (contact == 0) {
-    footerDisplay.style.display = "block";
-    contact = 1;
-  } else if (contact == 1) {
-    footerDisplay.style.display = "none";
-    contact = 0;
-  }
-  if (content == 0) {
-    footerDisplay.style.display = "block";
-    content = 1;
-  } else if (content == 1) {
-    footerDisplay.style.display = "none";
-    content = 0;
+function footer(id) {
+  if (screen.width <= 500) {
+    let footerDisplay = document.querySelector(".footer-" + id + " div");
+
+    if (shop == 0) {
+      footerDisplay.style.cssText = "block";
+      shop = 1;
+    } else if (shop == 1) {
+      footerDisplay.style.display = "none";
+      shop = 0;
+    }
+    if (about == 0) {
+      footerDisplay.style.display = "block";
+      about = 1;
+    } else if (about == 1) {
+      footerDisplay.style.display = "none";
+      about = 0;
+    }
+    if (contact == 0) {
+      footerDisplay.style.display = "block";
+      contact = 1;
+    } else if (contact == 1) {
+      footerDisplay.style.display = "none";
+      contact = 0;
+    }
+    if (content == 0) {
+      footerDisplay.style.display = "block";
+      content = 1;
+    } else if (content == 1) {
+      footerDisplay.style.display = "none";
+      content = 0;
+    }
   }
 }
