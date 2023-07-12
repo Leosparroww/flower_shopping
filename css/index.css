@@ -617,6 +617,7 @@ body::-webkit-scrollbar {
     object-position: center;
 }
 
+/* follow along */
 .social-following {
 
     width: 100%;
@@ -645,16 +646,16 @@ body::-webkit-scrollbar {
 }
 
 .social-image {
-    text-align: center;
-    display: flex;
+    width: 100%;
+    padding: 3%;
     column-gap: 1%;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
 }
 
 .social-image img {
     display: inline-block;
-    width: 15%;
+    width: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
     object-position: center;
@@ -701,7 +702,7 @@ footer div:nth-child(6) {
 .toggle {
     position: relative;
     width: 20px;
-    cursor: pointer;
+
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -760,7 +761,12 @@ footer div:nth-child(6) {
         font-size: 2rem;
     }
 
+    footer {
 
+        padding: 4% 7%;
+
+
+    }
 
 }
 
@@ -794,6 +800,19 @@ footer div:nth-child(6) {
 
     .nav-bar button {
         padding: 5px 20px;
+
+    }
+
+    footer {
+
+        padding: 4% 5%;
+
+
+    }
+
+    footer div:nth-child(6) {
+
+        margin-top: 5%;
 
     }
 }
@@ -831,11 +850,6 @@ footer div:nth-child(6) {
     }
 
     /* cursor */
-    .event div:nth-child(3) a {
-        width: 70%;
-        margin-top: 7%;
-    }
-
     .nav-bar {
 
         padding: 20px 10px;
@@ -848,7 +862,30 @@ footer div:nth-child(6) {
         padding: 8% 5% 5% 5%;
     }
 
+    /* EVENT */
+    .event div:nth-child(3) a {
+        width: 70%;
+        margin-top: 7%;
+    }
 
+    .event div:nth-child(4) {
+        padding: 5%;
+        gap: 2%;
+    }
+
+    /* footer */
+    footer {
+
+        padding: 4% 2%;
+        grid-template-columns: auto auto auto auto auto;
+
+    }
+
+    footer div:nth-child(6) {
+
+        margin-top: 4%;
+
+    }
 }
 
 @media(max-width:800px) {
@@ -897,9 +934,63 @@ footer div:nth-child(6) {
         height: 35%;
 
     }
+
+    .event div:first-child article {
+
+        padding: 20px;
+        font-size: 0.9rem;
+        height: 60%;
+        aspect-ratio: 4/2;
+    }
+
+    .event div:first-child article h1 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .event div:nth-child(4) {
+        padding: 5%;
+        gap: 1%;
+        font-size: 0.9rem;
+    }
+
+    .event div:nth-child(4) p {
+        text-align: justify;
+    }
+
+    .event div:nth-child(4) h1 {
+        font-size: 1.3rem;
+    }
+
+    .event div:nth-child(4) article {
+        margin-top: 0px;
+    }
+
+    /* followalong */
+    .social-following {
+
+        aspect-ratio: 2/2;
+
+    }
+
+    .social-image {
+        padding: 2%;
+        row-gap: 1.5%;
+        grid-template-columns: auto auto auto;
+    }
 }
 
 @media (max-width:700px) {
+
+    /* flower scroller */
+    .scroll-bar {
+
+        height: 40px;
+
+
+    }
+
+    /* flower scroller */
     .nav-bar {
 
         width: 100%;
@@ -956,9 +1047,28 @@ footer div:nth-child(6) {
         width: 40%;
 
     }
+
+    /* footer */
+    footer {
+        grid-template-columns: auto auto auto auto;
+
+    }
+
+    footer div:first-child {
+        text-align: center;
+        grid-column: 1/5;
+        margin-bottom: 20px;
+    }
+
+    footer div:nth-child(6) {
+        text-align: center;
+        margin-top: 7%;
+        grid-column: 1/5;
+    }
 }
 
 @media (max-width:600px) {
+
     .product {
         width: 100%;
         aspect-ratio: 5/4;
@@ -979,6 +1089,25 @@ footer div:nth-child(6) {
         margin: px 0;
 
     }
+
+    /* event */
+    .event div:first-child {
+        aspect-ratio: 6/4;
+    }
+
+    .event div:first-child article {
+        padding: 20px;
+        font-size: 0.9rem;
+        height: 60%;
+        aspect-ratio: 3/2;
+    }
+
+    .event div:first-child a {
+        padding: 0.2rem 0.5rem;
+
+    }
+
+
 }
 
 @media (max-width:550px) {
@@ -996,7 +1125,7 @@ footer div:nth-child(6) {
         width: 100%;
         height: 100%;
         justify-content: right;
-        gap: 10%;
+        gap: 8%;
         padding: 5%;
         z-index: 0;
         background: linear-gradient(to left, transparent 50%, var(--color--3) 50%) right;
@@ -1012,7 +1141,6 @@ footer div:nth-child(6) {
     .nav-bar-item {
         transform-origin: right;
         transition: all 0.8s cubic-bezier(0.77, 0, 0.175, 1);
-
         transform: translateY(-150%);
     }
 
@@ -1039,6 +1167,20 @@ footer div:nth-child(6) {
 }
 
 @media (max-width:500px) {
+
+    /* event */
+    .event div:first-child article h1 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .event div:first-child article {
+        font-size: 0.8rem;
+        height: 67%;
+        aspect-ratio: 3/2;
+    }
+
+    /* event */
     .text-box {
         padding: 9% 2% 5%;
     }
@@ -1071,9 +1213,77 @@ footer div:nth-child(6) {
         border: none;
         font-size: 0.8rem;
     }
+
+    /* footer */
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        padding: 20px 20px;
+    }
+
+
+
+    footer div div {
+        display: none;
+
+    }
+
+    footer h1 {
+        text-align: left;
+
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+    }
+
 }
 
 @media (max-width:400px) {
+
+    /* navbar */
+    .nav-bar-helper {
+        align-self: center;
+        padding: 4%;
+
+    }
+
+    .nav-bar-item {
+        gap: 10px;
+        font-size: 0.8rem;
+    }
+
+    .nav-bar-item button {
+        font-size: 0.8rem;
+    }
+
+    .event div:first-child {
+
+        aspect-ratio: 4/3;
+
+
+    }
+
+    .event div:first-child article {
+        aspect-ratio: 3/2;
+        height: 73%;
+        padding: 10px;
+
+    }
+
+    .event div:first-child article h1 {
+
+        margin-bottom: 5px;
+
+    }
+
+    .event div:first-child a {
+        font-size: 0.8rem;
+        padding: 0.1rem 0.4rem;
+
+    }
 
     .carousel {
         width: 100%;
@@ -1107,6 +1317,7 @@ footer div:nth-child(6) {
 
         width: 100%;
         aspect-ratio: 3/4;
+
     }
 
     .product-card {
@@ -1134,15 +1345,87 @@ footer div:nth-child(6) {
 
     .product-card div:nth-child(3) {
         grid-area: 2 / 1 / 3 / 3;
+        width: 50%;
+        margin: auto;
     }
 
     .product-card div:nth-child(3) img {
-        aspect-ratio: 3/2;
+        aspect-ratio: 2/2;
 
+    }
+
+    /* followalong*/
+
+
+    .social-following {
+
+        aspect-ratio: 4/5;
+
+    }
+
+    .social-text h1 {
+        font-size: 1.1rem;
+    }
+
+    .social-text,
+    .social-text a {
+        font-size: 0.8rem;
     }
 }
 
 @media (max-width:300px) {
+
+    /* navbar */
+    .nav-bar-helper {
+        align-self: center;
+        padding: 2%;
+        gap: 4%;
+    }
+
+    .nav-bar-item {
+        gap: 10px;
+        font-size: 0.8rem;
+    }
+
+    .nav-bar-item button {
+        padding: 2px 8px;
+        font-size: 0.8rem;
+    }
+
+    .toggle {
+
+        width: 13px;
+
+        height: 13px;
+
+    }
+
+    /* navbar */
+    /* flower scroller */
+    .scroll-bar {
+
+        height: 30px;
+
+    }
+
+    /* flower scroller */
+    .event div:first-child article h1 {
+        font-size: 0.9rem;
+    }
+
+    .event div:first-child article {
+
+
+        font-size: 0.7rem;
+    }
+
+    .event div:first-child {
+
+        aspect-ratio: 5/4;
+
+
+    }
+
     .carousel {
         aspect-ratio: 16/13.5;
     }
