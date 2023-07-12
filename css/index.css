@@ -1046,6 +1046,15 @@ footer div:nth-child(6) {
 
     }
 
+    /* /product */
+    .product-card a {
+
+
+
+        font-size: 1rem;
+
+    }
+
     /* footer */
     footer {
         grid-template-columns: 24% 24% 24% auto;
