@@ -258,6 +258,90 @@ button:hover {
     margin: 30px 0px;
 }
 
-.signupLink {
-    margin: 30px 0px;
+.loginlink {
+    margin: 0px 0px;
+    font-size: 0.9rem;
+
+}
+
+.loginlink a {
+    color: var(--color--3);
+}
+
+.loginlink a:hover {
+    color: var(--color--6);
+}
+
+@media (max-width:1080px) {
+    .container2 {
+
+
+        height: 530px;
+
+
+    }
+
+    .container2 .loginBox {
+        padding: 20px 20px;
+
+    }
+
+    .loginBox h1 {
+        margin: 10px 0px 20px 0px;
+
+    }
+
+    .loginBox span {
+        display: block;
+        margin: 15px 0px;
+
+    }
+
+    button {
+        margin: 15px 0px;
+        padding: 7px 40px;
+    }
+
+    .google {
+        margin: 15px 0px;
+    }
+
+    .signuplink {
+        margin: 0px;
+
+    }
+}
+
+@media (max-width:800px) {
+    .carousel {
+        display: none;
+    }
+
+    .container2 .loginBox {
+        padding: 20px 30px;
+
+    }
+
+    .container2 {
+
+        aspect-ratio: 1.5/2;
+        grid-template-columns: 100%;
+
+    }
+
+
+}
+
+@media (max-width:450px) {
+    .container2 {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        place-items: center;
+    }
+
+    .container2 .loginBox {
+
+        width: 100%;
+    }
 }

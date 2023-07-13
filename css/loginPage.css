@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700&family=Mali:wght@400;600;700&family=Roboto:wght@300;400;700&display=swap&family=Merienda:wght@400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700;800&family=Mali:wght@300;400;700&family=Merienda:wght@400;600;700;800;900&display=swap');
 
 * {
     padding: 0;
@@ -6,7 +6,7 @@
     box-sizing: border-box;
     text-decoration: none;
     scroll-behavior: smooth;
-    text-decoration: none;
+
     list-style: none;
     outline: none;
     font-family: var(--font-1), var(--font-4);
@@ -29,10 +29,12 @@
 }
 
 body {
-
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     animation: back 40s infinite;
+
 }
 
 @keyframes back {
@@ -63,6 +65,7 @@ body {
 }
 
 .container {
+
     min-width: 100%;
     height: 100vh;
     background-color: rgba(255, 255, 255, 0.176);
@@ -79,6 +82,7 @@ body {
     aspect-ratio: 3/2;
     border-radius: 10px;
     background-color: white;
+
 }
 
 .container2 .carousel {
@@ -91,19 +95,20 @@ body {
     height: 100%;
     display: flex;
     inset: 0;
-}
-
-.slider {
     position: relative;
 }
 
 
 
+
+
 .slider .slide {
+
     width: 100%;
     height: 100%;
     clip-path: circle(150% at 0 51%);
     position: absolute;
+    inset: 0;
 
 }
 
@@ -118,43 +123,14 @@ body {
     animation: in 5s forwards;
 }
 
-@keyframes in {
-
-    0% {
-        clip-path: circle(0% at 0 50%);
-    }
-
-    100% {
-        clip-path: circle(150% at 0 50%);
-    }
-}
-
-@keyframes out {
-
-    0% {
-        clip-path: circle(150% at 0 50%);
-    }
-
-    100% {
-
-        clip-path: circle(0% at 0 50%);
-    }
-}
-
 .container2 .carousel img {
+    display: block;
     border-radius: 10px 0 0 10px;
     object-fit: cover;
     object-position: center;
     width: 100%;
     height: 100%;
 }
-
-.container2 .carousel .radio {
-    position: absolute;
-    top: 0px;
-}
-
-
 
 .container2:nth-child(2) {
     width: 100%;
@@ -168,10 +144,11 @@ body {
 
 
 .loginBox h1 {
-    font-family: var(--font-4);
+
     margin: 40px 0px 60px 0px;
     font-size: 2rem;
-
+    color: var(--color--4);
+    font-family: var(--font-4);
 }
 
 .loginBox span {
@@ -235,6 +212,7 @@ button {
     background: linear-gradient(to left, var(--color--4), var(--color--3) 50%) right;
     background-size: 200%;
     transition: .5s ease-out;
+
 }
 
 button:hover {
@@ -270,6 +248,114 @@ button:hover {
     margin: 30px 0px;
 }
 
-.signupLink {
+.signuplink {
     margin: 30px 0px;
+    font-size: 0.9rem;
+}
+
+.signuplink a {
+    color: var(--color--3);
+
+}
+
+.signuplink a:hover {
+    color: var(--color--6);
+}
+
+@keyframes in {
+
+    0% {
+        clip-path: circle(0% at 0 50%);
+    }
+
+    100% {
+        clip-path: circle(150% at 0 50%);
+    }
+}
+
+@keyframes out {
+
+    0% {
+        clip-path: circle(150% at 0 50%);
+    }
+
+    100% {
+
+        clip-path: circle(0% at 0 50%);
+    }
+}
+
+@media (max-width:1080px) {
+    .container2 {
+
+
+        height: 500px;
+
+
+    }
+
+    .container2 .loginBox {
+        padding: 20px 20px;
+
+    }
+
+    .loginBox h1 {
+
+        margin: 20px 0px 20px 0px;
+
+    }
+
+    .loginBox span {
+        display: block;
+        margin: 15px 0px;
+
+    }
+
+    button {
+        margin: 15px 0px;
+        padding: 7px 40px;
+    }
+
+    .google {
+        margin: 15px 0px;
+    }
+
+    .signuplink {
+        margin: 0px;
+
+    }
+}
+
+@media (max-width:800px) {
+    .carousel {
+        display: none;
+    }
+
+    .container2 .loginBox {
+        padding: 20px 30px;
+
+    }
+
+    .container2 {
+
+        aspect-ratio: 1.5/2;
+        grid-template-columns: 100%;
+
+    }
+
+
+}
+
+@media (max-width:450px) {
+    .container2 {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        place-items: center;
+    }
+
+    .container2 .loginBox {
+
+        width: 100%;
+    }
 }
