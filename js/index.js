@@ -42,13 +42,13 @@ function ScrollDown() {
 }
 
 //scrollbar hover on display
-function scrollHover() {
-  var styleElement = document.createElement("style");
-  styleElement.appendChild(
-    document.createTextNode("body::-webkit-scrollbar: {width:20px}")
-  );
-  document.getElementsByTagName("head")[0].appendChild(styleElement);
-}
+// function scrollHover() {
+//   var styleElement = document.createElement("style");
+//   styleElement.appendChild(
+//     document.createTextNode("body::-webkit-scrollbar: {width:20px}")
+//   );
+//   document.getElementsByTagName("head")[0].appendChild(styleElement);
+// }
 
 // carousel
 
@@ -86,11 +86,15 @@ const cursor1 = document.querySelector(".cursor1");
 const cursor2 = document.querySelector(".cursor2");
 function mouseOver() {
   cursor1.style.display = cursor2.style.display = "block";
-  cursor1.style.opacity = cursor2.style.opacity = 1;
+  if (screen.width >= 600) {
+    cursor1.style.opacity = cursor2.style.opacity = 1;
+  }
 }
 function mouseOut() {
-  cursor1.style.opacity = cursor2.style.opacity = 0;
-  cursor1.style.display = cursor2.style.display = "none";
+  if (screen.width >= 600) {
+    cursor1.style.opacity = cursor2.style.opacity = 0;
+    cursor1.style.display = cursor2.style.display = "none";
+  }
 }
 document.addEventListener("mousemove", (e) => {
   let x = e.clientX;
