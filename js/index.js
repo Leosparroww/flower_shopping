@@ -99,7 +99,7 @@ function mouseOut() {
 // exta mouse event lisenter
 if (screen.width <= 600) {
   document.addEventListener("mouseover", () => {
-    cursor1.style.display = cursor2.style.display = "block";
+    cursor1.style.display = "block";
   });
 }
 document.addEventListener("mousemove", (e) => {
