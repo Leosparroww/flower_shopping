@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/shoppingPage.css">
+</head>
+
+<body>
+    <!-- navbar start -->
+    <section class="nav-bar">
+        <h1 class="logo">Marigold</h1>
+        <ul class="nav-bar-helper">
+            <div class="nav-bar-item">
+                <li><a href="https://www.youtube.com/watch?v=vQtYtlp5jrA">Contact</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Shop</a></li>
+                <li><a href="loginPage.html" class="login"><button>Login</button></a></li>
+            </div>
+            <span class="nav-bar-menu">
+                <input type="checkbox" id="checkbox" class="checkbox" />
+                <label for="checkbox" class="toggle" onclick="checkIn()">
+                    <div class="bars" id="bar1"></div>
+                    <div class="bars" id="bar2"></div>
+                    <div class="bars" id="bar3"></div>
+                </label>
+            </span>
+        </ul>
+    </section>
+    <!-- navbar end -->
+    <div class="container">
+        <!-- carosel start -->
+        <section class="carousel">
+            <div class="slider" data-slides>
+                <div class="slide" data-active><img src="./image/slideimage1.jpg" alt=""></div>
+                <div class="slide"><img src="./image/slideimage2.jpg" alt=""></div>
+                <div class="slide"><img src="./image/slideimage3.jpg" alt=""></div>
+            </div>
+            <div class="slider-btn">
+                <button data-slide-button="prev">&#10094;</button>
+                <button data-slide-button="next">&#10095;</button>
+            </div>
+            <div data-button class="small-btn">
+                <div data-active></div>
+                <div>
+                </div>
+                <div></div>
+            </div>
+        </section>
+        <!-- carousel end -->
+    </div>
+    <!-- footer start -->
+    <footer>
+        <div>
+            <h1>Marigold</h1>
+        </div>
+        <div class="footer-shop">
+            <h3 onclick="footer('shop')">SHOP</h3>
+            <div>
+                <span>Flower</span>
+                <span>Plants</span>
+                <span>Gift</span>
+                <span>Events</span>
+            </div>
+        </div>
+        <div class="footer-about">
+            <h3 onclick="footer('about')">ABOUT</h3>
+            <div><span>Meet the team</span>
+                <span>Careers</span>
+                <span>Blog</span>
+                <span>FAQs</span>
+            </div>
+
+        </div>
+        <div class="footer-contact">
+            <h3 onclick="footer('contact')">CONTACT</h3>
+            <div>
+                <span>Get in Touch</span>
+                <span>Customers Support</span>
+                <span>Location</span>
+            </div>
+        </div>
+        <div class="footer-connect">
+            <h3 onclick="footer('connect')">LET'S CONNECT</h3>
+            <div><span>fe</span></div>
+        </div>
+        <div class="copyright">© 2023 MARIGOLD FLOWERS & SHOP&ensp;|&ensp;PRIVACY POLICY&ensp;|&ensp;TERMS OF USE </div>
+    </footer>
+    <!-- footer end -->
+</body>
+<script src="./js/shopping.js"></script>
+
+</html>

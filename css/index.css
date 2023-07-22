@@ -115,6 +115,7 @@ body::-webkit-scrollbar {
     width: 30px;
     aspect-ratio: 1/1;
     position: fixed;
+
     z-index: 6;
     transform: translate(-50%, -50%);
     transform-origin: center;
