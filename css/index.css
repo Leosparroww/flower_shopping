@@ -690,6 +690,30 @@ footer div:nth-child(6) {
     grid-column: 1/6;
 }
 
+.social-icon {
+    display: flex;
+
+    margin-top: 10px;
+
+
+}
+
+.social-icon svg {
+
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    fill: var(--color--7);
+
+}
+
+.social-icon svg:hover {
+
+    cursor: pointer;
+    fill: var(--color--1);
+
+}
+
 .nav-bar-helper {
     display: flex;
     align-items: center;
@@ -698,6 +722,8 @@ footer div:nth-child(6) {
 .nav-bar-menu input {
     display: none;
 }
+
+
 
 .toggle {
     position: relative;
@@ -887,6 +913,8 @@ footer div:nth-child(6) {
         margin-top: 4%;
 
     }
+
+
 }
 
 @media(max-width:800px) {
