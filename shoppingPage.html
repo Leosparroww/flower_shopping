@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/image/titleIcon.png" type="image/x-icon" />
+    <link rel="icon" href="/image/titleIcon.png" type="image/x-icon">
     <title>Marigold - Shoppping page</title>
     <link rel="stylesheet" href="css/shoppingPage.css">
 </head>
@@ -13,28 +13,28 @@
     <!-- navbar start -->
     <section class="nav-bar">
         <h1 class="logo">Marigold</h1>
-        <ul class="nav-bar-helper">
+        <div class="nav-bar-helper">
             <div class="nav-bar-item">
-                <li><a href="https://www.youtube.com/watch?v=vQtYtlp5jrA">Contact</a></li>
-                <li><a href="">FAQ</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Shop</a></li>
-                <li><a href="loginPage.html" class="login"><button>Login</button></a></li>
+                <span><a href="https://www.youtube.com/watch?v=vQtYtlp5jrA">Contact</a></span>
+                <span><a href="">FAQ</a></span>
+                <span><a href="">About</a></span>
+                <span><a href="">Home</a></span>
+                <span><a href="loginPage.html" class="login">Login</a></span>
             </div>
             <span class="nav-bar-menu">
-                <input type="checkbox" id="checkbox" class="checkbox" />
+                <input type="checkbox" id="checkbox" class="checkbox">
                 <label for="checkbox" class="toggle" onclick="checkIn()">
-                    <div class="bars" id="bar1"></div>
-                    <div class="bars" id="bar2"></div>
-                    <div class="bars" id="bar3"></div>
+                    <span class="bars" id="bar1"></span>
+                    <span class="bars" id="bar2"></span>
+                    <span class="bars" id="bar3"></span>
                 </label>
             </span>
-        </ul>
+        </div>
     </section>
     <!-- navbar end -->
     <div class="container">
         <!-- carosel start -->
-        <section class="carousel">
+        <div class="carousel">
             <div class="slider" data-slides>
                 <div class="slide" data-active><img src="./image/slideimage1.jpg" alt=""></div>
                 <div class="slide"><img src="./image/slideimage2.jpg" alt=""></div>
@@ -50,16 +50,490 @@
                 </div>
                 <div></div>
             </div>
-        </section>
+        </div>
         <!-- carousel end -->
+        <!-- shop start -->
+        <div class="shop-container">
+            <!-- category container start -->
+            <div class="category">
+                <div class="categories">
+                    <h3>Categories</h3>
+                    <div class="category-select">
+                        <label for="flower" class="first-label">Flower</label> <input type="checkbox" id="flower"
+                            class="category-check">
+                        <span class="arrow">&#10094;</span>
+                        <div class="select-box">
+                            <div><a href="">All flower</a></div>
+                            <div><a href="">Roses</a></div>
+                            <div><a href="">Lilies</a></div>
+                            <div><a href="">Tulips</a></div>
+                            <div><a href="">Lavanders</a></div>
+                            <div><a href="">Seasonal flower</a></div>
+                        </div>
+
+                    </div>
+                    <div class="category-select">
+                        <label for="plant" class="first-label">Plants</label> <input type="checkbox" id="plant"
+                            class="category-check">
+                        <span class="arrow">&#10094;</span>
+                        <div class="select-box">
+                            <div> <a href="">All plants</a></div>
+                            <div> <a href="">Indoor plants</a></div>
+                            <div> <a href="">Outdoor Plants</a></div>
+                            <div> <a href="">Bonsai </a></div>
+                            <div> <a href="">Herbs and Vegetables</a></div>
+                            <div> <a href="">Climbing and Trailing Plants</a></div>
+                            <div> <a href="">Aquatic Plants</a></div>
+                            <div> <a href="">Exotic and Tropical Plants</a></div>
+                            <div> <a href="">Rare and Collectible Plants</a></div>
+                            <div> <a href="">Plant Accessories</a></div>
+                            <div> <a href="">Gardening Tools</a></div>
+                            <div> <a href="">Plant Care and Maintenance</a></div>
+                            <div> <a href="">Gift Sets and Kits</a></div>
+                            <div> <a href="">Seasonal Plants</a></div>
+                        </div>
+                    </div>
+                    <div class="category-select">
+                        <label for="gift" class="first-label">Gifts</label> <input type="checkbox" id="gift"
+                            class="category-check">
+                        <span class="arrow">&#10094;</span>
+                        <div class="select-box">
+                            <div> <a href="">Birthday gifts</a></div>
+                            <div> <a href="">Anniversary gifts</a></div>
+                            <div> <a href="">Valentine's gifts</a></div>
+                            <div> <a href="">Mother's & father"s day gifts</a></div>
+                            <div> <a href="">Wedding gifts</a></div>
+                            <div> <a href="">Corporate and Business gifts</a></div>
+                            <div> <a href="">Just Because gifts</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter">
+                    <h3>Filter by</h3>
+                    <div class="color-select">
+                        <div class="category-header">Color select</div>
+                        <div class="select-box">
+                            <input type="checkbox" class="color-checkbox" id="color1">
+                            <input type="checkbox" class="color-checkbox" id="color2">
+                            <input type="checkbox" class="color-checkbox" id="color3">
+                            <input type="checkbox" class="color-checkbox" id="color4">
+                            <input type="checkbox" class="color-checkbox" id="color5">
+                            <input type="checkbox" class="color-checkbox" id="color6">
+                            <input type="checkbox" class="color-checkbox" id="color7">
+                            <input type="checkbox" class="color-checkbox" id="color8">
+                        </div>
+                    </div>
+                    <div class="price-select">
+                        <div class="category-header">
+                            Price
+                        </div>
+                        <div class="price-input">
+                            <div class="field">
+                                <span> Min</span>
+                                <input type="number" class="input-min" value="0" min="0">
+                            </div>
+                            <div class="separator">-</div>
+                            <div class="field">
+                                <span> Max</span>
+                                <input type="number" class="input-max" value="10000" max="10000">
+                            </div>
+                        </div>
+                        <div class="price-slider">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="range-input">
+                            <input type="range" class="min-range" id="min-range" min="0" max="10000" value="0">
+                            <input type="range" class="max-range" id="max-range" min="0" max="10000" value="10000">
+                        </div>
+                    </div>
+                    <div class="rating-select">
+                        <div class="category-header">Rating</div>
+                        <div> <input type="radio" name="rating" id="r1">
+                            <div class="star">
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                            </div>
+                            <div>5.0</div>
+                        </div>
+                        <div> <input type="radio" name="rating" id="r2">
+                            <div class="star">
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#x2606;</span>
+                            </div>
+                            <div>4.0</div>
+                        </div>
+                        <div> <input type="radio" name="rating" id="r3">
+                            <div class="star">
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#x2606;</span>
+                                <span>&#x2606;</span>
+                            </div>
+                            <div>3.0</div>
+                        </div>
+                        <div> <input type="radio" name="rating" id="r4">
+                            <div class="star">
+                                <span>&#9733;</span>
+                                <span>&#9733;</span>
+                                <span>&#x2606;</span>
+                                <span>&#x2606;</span>
+                                <span>&#x2606;</span>
+                            </div>
+                            <div>2.0</div>
+                        </div>
+                        <div> <input type="radio" name="rating" id="r5">
+                            <div class="star">
+                                <span>&#9733;</span>
+                                <span>&#x2606;</span>
+                                <span>&#x2606;</span>
+                                <span>&#x2606;</span>
+                                <span>&#x2606;</span>
+                            </div>
+                            <div>1.0</div>
+                        </div>
+                    </div>
+                    <div class="filter-btn"><button>filter</button></div>
+                </div>
+            </div>
+            <!-- category container end -->
+            <!-- product container -->
+            <div class="product-container">
+                <div class="product-toolbar">
+                    <div class="view">
+                        <div>Views&ensp;:&ensp;</div>
+                        <div class="view-box" data-view-box>
+                            <div class="view-box1">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="view-box2">
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="view-box3">
+                                <span></span>
+                                <span></span><span></span>
+                            </div>
+                            <div class="view-box4" data-active>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="toolBar-child">
+                        <div class="show">
+                            <div>Show &ensp;:&ensp;</div>
+                            <div>
+                                <select id="show-select" class="show-select">
+                                    <option value="" selected>10</option>
+                                    <option value="">20</option>
+                                    <option value="">30</option>
+                                    <option value="">40</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="sort-by">
+                            <div>Sort by&ensp;:&ensp;</div>
+                            <div>
+                                <select class="show-select">
+                                    <option value="" selected>Featured</option>
+                                    <option value="">Price, low to height</option>
+                                    <option value="">Price, low to height</option>
+                                    <option value="">A-Z</option>
+                                    <option value="">Z-A</option>
+                                    <option value="">By date, latest</option>
+                                    <option value="">By date, oldest</option>
+                                    <option value="">Best selling</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-list">
+                    <div class="product-card">
+                        <div class="product-img"><a href=""><img src="./image/product/sunflower.jpg" alt=""></a>
+                            <div class="product-icon">
+                                <div class="quick-view"><img src="/image/icon/view.png" alt=""></div>
+                                <div class="add-cart"><img src="/image/icon/cart-plus.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="product-article">
+                            <div class="product-text">
+                                <div class="product-name">Sunflower</div>
+                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="product-price">20000&ensp;kyats</div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img"><a href=""><img src="./image/product/redrose.jpg" alt=""></a>
+                            <div class="product-icon">
+                                <div class="quick-view"><img src="/image/icon/view.png" alt="">
+                                </div>
+                                <div class="add-cart"><img src="/image/icon/cart-plus.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="product-article">
+                            <div class="product-text">
+                                <div class="product-name">Red Roses</div>
+                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="product-text2">
+                                <div class="product-description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Ut soluta ducimus modi totam
+                                    expedita a laudantium ipsam numquam voluptatem illum.</div>
+                                <div class="product-price">40000&ensp;kyats</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img"><a href=""><img src="./image/product/laravander.jpg" alt=""></a>
+                            <div class="product-icon">
+                                <div class="quick-view"><img src="/image/icon/view.png" alt=""></div>
+                                <div class="add-cart"><img src="/image/icon/cart-plus.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="product-article">
+                            <div class="product-text">
+                                <div class="product-name">lavander</div>
+                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="product-text2">
+                                <div class="product-description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Ut soluta ducimus modi totam
+                                    expedita a laudantium ipsam numquam voluptatem illum.</div>
+                                <div class="product-price">40000&ensp;kyats</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img"><a href=""><img src="./image/product/tulips.jpg" alt=""></a>
+                            <div class="product-icon">
+                                <div class="quick-view"><img src="/image/icon/view.png" alt=""></div>
+                                <div class="add-cart"><img src="/image/icon/cart-plus.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="product-article">
+                            <div class="product-text">
+                                <div class="product-name">Tulips</div>
+                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="product-text2">
+                                <div class="product-description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Ut soluta ducimus modi totam
+                                    expedita a laudantium ipsam numquam voluptatem illum.</div>
+                                <div class="product-price">40000&ensp;kyats</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img"><a href=""><img src="./image/product/bonsai.jpg" alt=""></a>
+                            <div class="product-icon">
+                                <div class="quick-view"><img src="/image/icon/view.png" alt=""></div>
+                                <div class="add-cart"><img src="/image/icon/cart-plus.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="product-article">
+                            <div class="product-text">
+                                <div class="product-name">bonsai</div>
+                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="product-text2">
+                                <div class="product-description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Ut soluta ducimus modi totam
+                                    expedita a laudantium ipsam numquam voluptatem illum.</div>
+                                <div class="product-price">40000&ensp;kyats</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img"><a href=""><img src="./image/product/lilies.jpg" alt=""></a>
+                            <div class="product-icon">
+                                <div class="quick-view"><img src="/image/icon/view.png" alt=""></div>
+                                <div class="add-cart"><img src="/image/icon/cart-plus.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="product-article">
+                            <div class="product-text">
+                                <div class="product-name">lilies</div>
+                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="product-text2">
+                                <div class="product-description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Ut soluta ducimus modi totam
+                                    expedita a laudantium ipsam numquam voluptatem illum.</div>
+                                <div class="product-price">40000&ensp;kyats</div>
+                                <div class="product-article"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img"><a href=""><img src="./image/product/petunias.jpg" alt=""></a>
+                            <div class="product-icon">
+                                <div class="quick-view"><img src="/image/icon/view.png" alt=""></div>
+                                <div class="add-cart"><img src="/image/icon/cart-plus.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="product-article">
+                            <div class="product-text">
+                                <div class="product-name">petunias</div>
+                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="product-price">120000&ensp;kyats</div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img"><a href=""><img src="./image/product/yellow roses.jpg" alt=""></a>
+                            <div class="product-icon">
+                                <div class="quick-view"><img src="/image/icon/view.png" alt=""></div>
+                                <div class="add-cart"><img src="/image/icon/cart-plus.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="product-article">
+                            <div class="product-text">
+                                <div class="product-name">yellow roses</div>
+                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="product-price">30000&ensp;kyats</div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img"><a href=""><img src="./image/product/Monstera deliciosa.jpg"
+                                    alt=""></a>
+                            <div class="product-icon">
+                                <div class="quick-view"><img src="/image/icon/view.png" alt=""></div>
+                                <div class="add-cart"><img src="/image/icon/cart-plus.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="product-article">
+                            <div class="product-text">
+                                <div class="product-name">Monstera deliciosa</div>
+                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="product-price">10000&ensp;kyats</div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img"><a href=""><img src="./image/product/Frangipani.jpg" alt=""></a>
+                            <div class="product-icon">
+                                <div class="quick-view"><img src="/image/icon/view.png" alt=""></div>
+                                <div class="add-cart"><img src="/image/icon/cart-plus.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="product-article">
+                            <div class="product-text">
+                                <div class="product-name">Frangipani</div>
+                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="product-price">40000&ensp;kyats</div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img"><a href=""><img src="./image/product/African daisies.jpg" alt=""></a>
+                            <div class="product-icon">
+                                <div class="quick-view"><img src="/image/icon/view.png" alt=""></div>
+                                <div class="add-cart"><img src="/image/icon/cart-plus.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="product-article">
+                            <div class="product-text">
+                                <div class="product-name">African daisies</div>
+                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="product-price">40000&ensp;kyats</div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img"><a href=""><img src="./image/product/BridalBouquets.jpg" alt=""></a>
+                            <div class="product-icon">
+                                <div class="quick-view"><img src="/image/icon/view.png" alt=""></div>
+                                <div class="add-cart"><img src="/image/icon/cart-plus.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="product-article">
+                            <div class="product-text">
+                                <div class="product-name">Bridal Bouquets</div>
+                                <div class="product-rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                            <div class="product-price">20000&ensp;kyats</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="product-quick-view">
+                    <div class="quick-view-card">
+                        <div class="quick-img"><img src="/image/product/BridalBouquets.jpg" alt=""></div>
+                        <div class="quick-article">
+                            <div class="quick-category">Bouquets</div>
+                            <div class="quick-header">Tulips</div>
+                            <div class="quick-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Nihil laborum ullam aliquam. Voluptas ipsa doloremque repellat suscipit neque incidunt
+                                commodi.</div>
+                            <div class="size">
+                                <h4>SIZE</h4>
+                                <a href="">standard</a>
+                                <a href="">deluxe</a>
+                                <a href="">premium</a>
+                            </div>
+                            <div class="quick-color">
+                                <h4>COLOR</h4>
+                                <span>
+                                    <input type="checkbox" class="color-checkbox" id="color6">
+                                    <input type="checkbox" class="color-checkbox" id="color7">
+                                    <input type="checkbox" class="color-checkbox" id="color8">
+                                </span>
+                            </div>
+                            <div class="quick-price">
+                                <span class="price2">
+                                    20000 KYATS
+                                </span>
+                                <div class="quick-quantity">
+                                    <input class="quantity" name="quantity" min='1' value="1" type="number">
+                                    <div class="quick-btn">
+                                        <button
+                                            onclick="document.querySelector('.quick-quantity input[type=number]').stepDown()">&#8595;</button>
+                                        <button
+                                            onclick="document.querySelector('.quick-quantity input[type=number]').stepUp()"
+                                            class="plus">&#x2191;</button>
+                                    </div>
+                                </div>
+                                <div class="quick-cart"><a href="">Add to cart&ensp;&#128722;</a></div>
+                            </div>
+                            <div class="quick-cross">
+                                &#10761;
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- product container -->
+        </div>
     </div>
+
     <!-- footer start -->
     <footer>
         <div>
             <h1>Marigold</h1>
         </div>
         <div class="footer-shop">
-            <h3 onclick="footer('shop')">SHOP</h3>
+            <h3>SHOP</h3>
             <div>
                 <span>Flower</span>
                 <span>Plants</span>
@@ -68,16 +542,15 @@
             </div>
         </div>
         <div class="footer-about">
-            <h3 onclick="footer('about')">ABOUT</h3>
+            <h3>ABOUT</h3>
             <div><span>Meet the team</span>
                 <span>Careers</span>
                 <span>Blog</span>
                 <span>FAQs</span>
             </div>
-
         </div>
         <div class="footer-contact">
-            <h3 onclick="footer('contact')">CONTACT</h3>
+            <h3>CONTACT</h3>
             <div>
                 <span>Get in Touch</span>
                 <span>Customers Support</span>
@@ -85,7 +558,7 @@
             </div>
         </div>
         <div class="footer-connect">
-            <h3 onclick="footer('connect')">LET'S CONNECT</h3>
+            <h3>LET'S CONNECT</h3>
             <div><span>fe</span></div>
         </div>
         <div class="copyright">© 2023 MARIGOLD FLOWERS & SHOP&ensp;|&ensp;PRIVACY POLICY&ensp;|&ensp;TERMS OF USE </div>

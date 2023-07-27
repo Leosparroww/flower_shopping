@@ -1,6 +1,6 @@
 const slides = document.querySelector("[data-slides]");
 const pin = document.querySelector("[data-button]");
-var timer = setInterval(carousel, 5000);
+var timer = setInterval(carousel, 10000);
 function carousel(offset) {
   const activeSlide = slides.querySelector("[data-active]");
   const activeSlide2 = pin.querySelector("[data-active]");
@@ -24,5 +24,102 @@ buttons.forEach((button) => {
     carousel(offset);
     clearInterval(timer);
     timer = setInterval(carousel, 5000);
+  });
+});
+
+//price range
+
+const rangeInput = document.querySelectorAll(".range-input input");
+const progress = document.querySelector(".price-slider .progress");
+const priceInput = document.querySelectorAll(".price-input input");
+let priceGap = 1000;
+
+priceInput.forEach((input) => {
+  input.addEventListener("input", (e) => {
+    //get two value of price input to number
+    let minVal = parseInt(priceInput[0].value);
+    let maxVal = parseInt(priceInput[1].value);
+    maxVal > 10000 ? (maxVal = 10000) : "";
+    if (maxVal - minVal >= priceGap) {
+      if (e.target.className === "input-min") {
+        rangeInput[0].value = minVal;
+        progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+      } else if (e.target.className === "input-max") {
+        rangeInput[1].value = maxVal;
+        progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+      }
+    }
+  });
+});
+
+rangeInput.forEach((input) => {
+  input.addEventListener("input", (e) => {
+    //get two value of range input to number
+    let minVal = parseInt(rangeInput[0].value);
+    let maxVal = parseInt(rangeInput[1].value);
+
+    if (maxVal - minVal < priceGap) {
+      // if else for slider
+      if (e.target.className == "max-range") {
+        rangeInput[1].value = minVal + priceGap;
+      } else if (e.target.className == "min-range") {
+        rangeInput[0].value = maxVal - priceGap;
+      }
+    } else {
+      //progress bar
+      priceInput[0].value = minVal;
+      priceInput[1].value = maxVal;
+      progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+      progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+    }
+  });
+});
+
+// for view box
+const viewBox = document.querySelectorAll("[data-view-box] div");
+const viewBox1 = document.querySelector("[data-view-box]");
+viewBox.forEach((view) => {
+  view.addEventListener("click", () => {
+    activeViewBox = viewBox1.querySelector("[data-active]");
+    if (view != activeViewBox) {
+      delete activeViewBox.dataset.active;
+    }
+    view.dataset.active = true;
+
+    //css grid change
+    // boxIndex = [...viewindex.children];
+    index = [...viewBox1.children].indexOf(view);
+    productList = document.querySelector(".product-list");
+
+    if (index == 0) {
+      productList.style.cssText =
+        "grid-template-columns:repeat(1, minmax(auto, 1fr));";
+      document.querySelector(".product-list").dataset.box = true;
+    } else if (index == 1) {
+      productList.style.cssText =
+        "grid-template-columns:repeat(2, minmax(auto, 1fr));";
+      delete document.querySelector(".product-list").dataset.box;
+    } else if (index == 2) {
+      productList.style.cssText =
+        "grid-template-columns:repeat(3, minmax(auto, 1fr));";
+      delete document.querySelector(".product-list").dataset.box;
+    } else if (index == 3) {
+      productList.style.cssText =
+        "grid-template-columns:repeat(4, minmax(auto, 1fr));";
+      delete document.querySelector(".product-list").dataset.box;
+    }
+  });
+});
+
+// for quick view
+
+const quickView = document.querySelector(".quick-cross");
+const quickView1 = document.querySelectorAll(".quick-view");
+quickView.addEventListener("click", () => {
+  document.querySelector(".product-quick-view").style.display = "none";
+});
+quickView1.forEach((view1) => {
+  view1.addEventListener("click", () => {
+    document.querySelector(".product-quick-view").style.display = "grid";
   });
 });
