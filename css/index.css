@@ -708,7 +708,6 @@ footer div:nth-child(6) {
 }
 
 .social-icon svg:hover {
-
     cursor: pointer;
     fill: var(--color--1);
 

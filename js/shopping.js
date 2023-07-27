@@ -23,7 +23,7 @@ buttons.forEach((button) => {
     const offset = button.dataset.slideButton === "next" ? 1 : -1;
     carousel(offset);
     clearInterval(timer);
-    timer = setInterval(carousel, 5000);
+    timer = setInterval(carousel, 8000);
   });
 });
 
@@ -123,3 +123,59 @@ quickView1.forEach((view1) => {
     document.querySelector(".product-quick-view").style.display = "grid";
   });
 });
+
+//sidebar
+const navBarMenu = document.querySelector(".nav-bar-menu");
+const scrollBarCross = document.querySelector(".category-btn");
+const categoryParent = document.querySelector(".category-parent");
+navBarMenu.addEventListener("click", () => {
+  categoryParent.style.cssText =
+    "display:grid;transform:translate(0%);transform-origin:left;pointer-events:auto;";
+  document.body.style.cssText = "overflow:hidden;pointer-events:none;";
+});
+scrollBarCross.addEventListener("click", () => {
+  categoryParent.style.cssText = "transform:translate(-100%);";
+  document.body.style.cssText = "overflow:auto;pointer-events:auto;";
+});
+// when scrolling side bar diable home scroll
+
+// footer onclick
+let shop = 0;
+let about = 0;
+let contact = 0;
+let content = 0;
+
+function footer(id) {
+  if (screen.width <= 500) {
+    let footerDisplay = document.querySelector(".footer-" + id + " div");
+
+    if (shop == 0) {
+      footerDisplay.style.cssText = "block";
+      shop = 1;
+    } else if (shop == 1) {
+      footerDisplay.style.display = "none";
+      shop = 0;
+    }
+    if (about == 0) {
+      footerDisplay.style.display = "block";
+      about = 1;
+    } else if (about == 1) {
+      footerDisplay.style.display = "none";
+      about = 0;
+    }
+    if (contact == 0) {
+      footerDisplay.style.display = "block";
+      contact = 1;
+    } else if (contact == 1) {
+      footerDisplay.style.display = "none";
+      contact = 0;
+    }
+    if (content == 0) {
+      footerDisplay.style.display = "block";
+      content = 1;
+    } else if (content == 1) {
+      footerDisplay.style.display = "none";
+      content = 0;
+    }
+  }
+}
