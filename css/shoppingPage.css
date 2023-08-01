@@ -954,7 +954,7 @@ input[type="range"]::-moz-range-thumb {
 
 }
 
-.quick-article .size a {
+.quick-article .size label {
     margin-top: 10px;
     display: inline-block;
     padding: 5px 10px;
@@ -964,9 +964,13 @@ input[type="range"]::-moz-range-thumb {
     margin-right: 10px;
 }
 
-.quick-article .size a:hover {
+.size .qCheck:checked~label {
     border: 1px var(--color--4) solid;
     color: var(--color--2);
+}
+
+.qCheck {
+    appearance: none;
 }
 
 .quick-color {
