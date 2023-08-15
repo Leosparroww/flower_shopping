@@ -31,7 +31,7 @@
         <!-- navbar end -->
         <!-- productstart -->
         <main class="product">
-            <div class="back"><span>&#129128;</span></div>
+            <!-- <div class="back"><span onclick="history.back()">&#129128;</span></div> -->
             <div class="product-img">
                 <div class="product-img-small" data-small>
                     <img src="/image/product/Africandaisies.jpg " alt="" data-active>
@@ -102,13 +102,24 @@
                     </div>
                     <div class="quantity">
                         <div>Quantity&ensp;:</div>
-                        <div></div>
+                        <div class="quantity-c">
+                            <button
+                                onclick="document.querySelector('.quantity input[type=number]').stepDown()">&#8722;</button>
+                            <input class="" name="quantity" min='1' value="1" type="number">
+                            <button onclick="document.querySelector('.quantity input[type=number]').stepUp()"
+                                class="plus">&#43;</button>
+
+                        </div>
                     </div>
                     <div class="sub-total">
                         <div>Subtotal&ensp;: </div>
                         <div>30000kyats</div>
                     </div>
-                    <div class="product-btn"></div>
+
+                </div>
+                <div class="product-btn">
+                    <button><img src="/image/icon/cart-plus.png" alt=""> Add to Cart </button>
+                    <button>Buy it Now</button>
                 </div>
             </div>
         </main>
